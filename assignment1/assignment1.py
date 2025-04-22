@@ -30,6 +30,20 @@ def calc(a, b, c="multiply"):
         return("You can't divide by 0!")
     except TypeError:
         return("You can't multiply those values!")
+    
 
+# Task 4: Data Type Conversion
+def data_type_conversion(value, type):
+    try:
+        match type:
+            case "float":
+                return float(value)
+            case "str":
+                return str(value)
+            case "int":
+                return int(value)
+    except ValueError:
+        return (f"You can't convert {str(value)} into a {str(type)}.")
+    
 # pytest -v -x assignment1-test.py
 # can use just -x, adding -v lists the passing tests
