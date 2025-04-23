@@ -63,5 +63,15 @@ def grade(*args):
             return "F"
     except TypeError:
         return "Invalid data was provided."
+    
+
+# Task 6: Use a For Loop with a Range
+def repeat(string, count):
+    result = ""
+    loops = range(count)
+    for loop in loops:
+        result += string
+    return result
+
 # pytest -v -x assignment1-test.py
 # can use just -x, adding -v lists the passing tests
