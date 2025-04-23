@@ -45,5 +45,23 @@ def data_type_conversion(value, type):
     except ValueError:
         return (f"You can't convert {str(value)} into a {str(type)}.")
     
+
+# Task 5: Grading System, Using * args
+def grade(*args):
+    try:
+        total = sum(args)
+        percentage = total / len(args)
+        if percentage >= 90:
+            return "A"
+        elif percentage > 79 and percentage < 90:
+            return "B"
+        elif percentage > 69 and percentage < 80:
+            return "C"
+        elif percentage > 59 and percentage < 70:
+            return "D"
+        else:
+            return "F"
+    except TypeError:
+        return "Invalid data was provided."
 # pytest -v -x assignment1-test.py
 # can use just -x, adding -v lists the passing tests
