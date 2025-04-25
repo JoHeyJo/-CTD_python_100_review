@@ -27,10 +27,10 @@ def calc(a, b, c="multiply"):
         elif c == "power":
             return a ** b
     except ZeroDivisionError:
-        return("You can't divide by 0!")
+        return ("You can't divide by 0!")
     except TypeError:
-        return("You can't multiply those values!")
-    
+        return ("You can't multiply those values!")
+
 
 # Task 4: Data Type Conversion
 def data_type_conversion(value, type):
@@ -44,7 +44,7 @@ def data_type_conversion(value, type):
                 return int(value)
     except ValueError:
         return (f"You can't convert {str(value)} into a {str(type)}.")
-    
+
 
 # Task 5: Grading System, Using * args
 def grade(*args):
@@ -63,7 +63,7 @@ def grade(*args):
             return "F"
     except TypeError:
         return "Invalid data was provided."
-    
+
 
 # Task 6: Use a For Loop with a Range
 def repeat(string, count):
@@ -72,6 +72,23 @@ def repeat(string, count):
     for loop in loops:
         result += string
     return result
+
+
+# Task 7: Student Scores, Using ** kwargs
+def student_scores(position, **kwargs):
+    total = 0
+    max = 0
+    maxScore = ''
+    for key, value in kwargs.items():
+        if max < value:
+            max = value
+            maxScore = key
+        total += value
+    if position == "mean":
+        return total / len(kwargs)
+    if position == "best":
+        return maxScore
+
 
 # pytest -v -x assignment1-test.py
 # can use just -x, adding -v lists the passing tests
