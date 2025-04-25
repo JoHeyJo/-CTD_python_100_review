@@ -90,5 +90,8 @@ def student_scores(position, **kwargs):
         return maxScore
 
 
+# Task 8: Titleize, with String and List Operations
+
+
 # pytest -v -x assignment1-test.py
 # can use just -x, adding -v lists the passing tests
