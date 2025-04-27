@@ -91,7 +91,17 @@ def student_scores(position, **kwargs):
 
 
 # Task 8: Titleize, with String and List Operations
-
+def titleize(string):
+    little_words = ["a", "on", "an", "the", "of", "and", "is", "in"]
+    words = string.split(" ")
+    capitalized_words = []
+    for i, word in enumerate(words):
+        if word not in little_words or i == 0 or i == len(words) - 1:
+            capitalized_words.append(word.capitalize())
+        else:
+            capitalized_words.append(word)
+    capitalized_string = " ".join(capitalized_words)
+    return capitalized_string
 
 # pytest -v -x assignment1-test.py
 # can use just -x, adding -v lists the passing tests
