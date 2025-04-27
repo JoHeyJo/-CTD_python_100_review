@@ -103,5 +103,9 @@ def titleize(string):
     capitalized_string = " ".join(capitalized_words)
     return capitalized_string
 
+
+# Task 9: Hangman, with more String Operations
+
+
 # pytest -v -x assignment1-test.py
 # can use just -x, adding -v lists the passing tests
