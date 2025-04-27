@@ -115,5 +115,8 @@ def hangman(secret, guess):
     return guessed
 
 
+# Task 10: Pig Latin, Another String Manipulation Exercise
+
+
 # pytest -v -x assignment1-test.py
 # can use just -x, adding -v lists the passing tests
