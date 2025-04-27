@@ -105,6 +105,14 @@ def titleize(string):
 
 
 # Task 9: Hangman, with more String Operations
+def hangman(secret, guess):
+    guessed = ""
+    for letter in secret:
+        if letter in guess:
+            guessed += letter
+        else:
+            guessed += "_"
+    return guessed
 
 
 # pytest -v -x assignment1-test.py
