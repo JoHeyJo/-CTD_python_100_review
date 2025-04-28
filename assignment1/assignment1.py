@@ -116,6 +116,27 @@ def hangman(secret, guess):
 
 
 # Task 10: Pig Latin, Another String Manipulation Exercise
+def pig_latin(string):
+    vowels = "aeiou"
+    phrase = string.split(" ")
+    converted_words = []
+    for word in phrase:
+        if word[0] in vowels:
+            converted_words.append(word + "ay")
+        elif word[0] == "q" and word[1] == "u":
+            converted_words.append(word[:2] + word[2:] + "ay")
+        else:
+            converted_words.append(convert_word(word))
+    return " ".join(converted_words)
+
+def convert_word(string):
+    vowels = "aeiou"
+    converted_string = ''
+    for i, char in enumerate(string):
+        if char not in vowels:
+            print(i)
+            converted_string = string[i+1:] + string[:i+1] + "ay"
+        return converted_string
 
 
 # pytest -v -x assignment1-test.py
